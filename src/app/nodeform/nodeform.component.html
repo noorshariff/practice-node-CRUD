@@ -1,0 +1,16 @@
+
+<div class="container card card-body mt-4">
+    <form action="" #form="ngForm" (ngSubmit)="postFormData(form)">
+      <h1 class="text-white bg-dark text-center">Form details</h1>
+            <div class="form-group">
+                <input type="text" name="name" #pname="ngModel" ngModel class="form-control" placeholder="Product name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="password" placeholder="password" #password="ngModel" ngModel>
+            </div>
+       
+        
+           
+        <button type="submit" class="btn btn-primary float-right mt-4">Submit</button>
+    </form>
+</div>

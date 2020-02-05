@@ -1,0 +1,61 @@
+<table class="table table-bordered">
+    <thead>
+        <th>Name</th>
+        <th>Age</th>
+    </thead>
+    <tbody >
+    <tr *ngFor ="let student of students" >
+        <td>{{student.name}}</td>
+        <td [style.borderColor]='student.age>20 ? "red":"green" '>{{student.age}}</td>
+    </tr>
+</tbody>
+</table>
+
+<!-- <h1 *ngIf="display">jabeena</h1>
+
+<h2 *ngIf="display ; else elseblock">dvfgfg</h2>
+<ng-template #elseblock>
+jabeena
+</ng-template> -->
+
+
+<div *ngIf="display;then thenblock;else elseblock"></div>
+<ng-template #thenblock>
+Noor
+</ng-template>
+
+<ng-template #elseblock>
+    Ayush
+</ng-template>
+
+<div *ngFor="let employee of employees;odd as o">
+    <h3>{{o}}{{employee}}</h3>
+</div>
+
+<h1 [ngClass]="classArray">this is class directive</h1>
+
+<h4 [ngClass]="{'bg-danger':'isSuccess','text-center':'isSuccess'}">class directive</h4>
+
+<h2 [ngClass]="styleClasses">gdfchdgcvgduhcihdksjdsjdlkkkkkjkjkuuhhjhhh</h2>
+
+
+<h1 [ngStyle]="{'background-color':'pink','font-size':'80px','font-weight':'bold'}">schedule interview</h1>
+
+<h3 [ngStyle]="{'background-color':isSuccess? 'green':'red'}">amreen</h3>
+
+<p [ngStyle]="myStyles">
+    You say tomato, I say tomato
+  </p>
+
+
+  <p [ngClass]="isSuccess? 'bg-success':'bg-danger'">Archana</p>
+
+
+  <div class="row">
+      <div class="col-6 col-sm-4">vfgtfgyuhgyhg</div>
+      <div class="col-6 col-sm-4">vfgtfgyuhgyhg</div>
+ <div class="w-100 d-none d-md-block"></div>
+  
+    <div class="col-6 col-sm-4">vfgtfgyuhgyhg</div>
+    <div class="col-6 col-sm-4">vfgtfgyuhgyhg</div>
+</div>

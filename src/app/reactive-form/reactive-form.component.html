@@ -1,0 +1,25 @@
+<div class="container card card-body col-md-4 mt-4">
+    <form action="" [formGroup]="Rform" (ngSubmit)="onSubmit(Rform.value)">
+        <h1 class="bg-dark text-white text-center">Reactive Form</h1>
+        <div class="form-group">
+            <input type="text" name="empUser" id="empUser" class="form-control" formControlName="empUser" required>
+        </div>
+        <div *ngIf="empUser.touched && empUser.invalid">
+            <p *ngIf="empUser.errors.required" class="alert-danger"> *Field is required</p>
+            <p *ngIf="empUser.errors.noSpace" class="alert-danger"> *space is not allowed</p>
+            <p *ngIf="empUser.errors.pattern" class="alert-danger"> *Numbers not allowed</p>
+        </div>
+        <div class="form-group">
+            <input type="tel" name="empPhone" id="empPhone" class="form-control" formControlName="empPhone" required maxlength="10">
+        </div>
+        <div *ngIf="empPhone.touched && empPhone.invalid">
+            <p *ngIf="empPhone.errors.required" class="alert-danger"> *Field is required</p>
+            <p *ngIf="empPhone.errors.noSpace" class="alert-danger"> *space is not allowed</p>
+            
+         
+           
+        </div>
+        <button type="submit" class="btn btn-primary float-left">submit</button>
+    </form>
+
+</div>
